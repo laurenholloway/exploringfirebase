@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+  <title>Workably</title>
+  <script src="https://www.gstatic.com/firebasejs/3.7.6/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.7.6/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.7.6/firebase-database.js"></script>
+
+  <script>
+  var config = {
+    apiKey: "AIzaSyBKYX4sHlab5VDtLWAwMCX9-yGUzPz16sQ",
+    authDomain: "workably-5739f.firebaseapp.com",
+    databaseURL: "https://workably-5739f.firebaseio.com",
+    projectId: "workably-5739f",
+    storageBucket: "workably-5739f.appspot.com",
+    messagingSenderId: "254668830932"
+  };
+  firebase.initializeApp(config);
+
+  </script>
+
+
+  <script src="public/reviewsform.js"></script>
+</head>
+<body>
+  <nav>
+    <a href="public/companyoverview.html">Company Reviews</a>
+
+  <!--form for collecting information-->
+  <form onsubmit="writeReview()">
+    <input type="text" placeholder="Enter Company Name" id="company">
+    <input type="text" placeholder="City" id="city">
+    <input type="text" placeholder="State" maxlength="2" size="2" id="state">
+    <input type="text" placeholder="Work Title" id="title">
+    <input type="number" min="1" max="5" id="rating">
+    <input type="textarea" id="review" placeholder="What is the company doing well? How can your company improve inclusion in the workplace?" maxlength="200">
+    <input type="submit" title="Submit">
+  </form>
+
+
+
+</body>
+</html>
